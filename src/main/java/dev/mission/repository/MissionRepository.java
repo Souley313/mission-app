@@ -17,7 +17,5 @@ public interface MissionRepository extends JpaRepository<Mission, Integer> {
 	@Query("SELECT m FROM Mission m WHERE m.dateDebut >=?1 AND m.tauxJournalier>=?2")
 	List<Mission> ListerProchainesMissionsParTJM(LocalDate dateDebut, BigDecimal tauxMin);
 
-	@Query("SELECT m FROM Mission m WHERE m.dateDebut>=?1")
-	List<Mission> findByDateDebutGreaterThanEqual(LocalDate dateMin);
 
 }
